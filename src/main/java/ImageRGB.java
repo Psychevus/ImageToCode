@@ -21,6 +21,7 @@ public class ImageRGB extends Component {
         for (File file : arrayList) {
             new ImageRGB(file);
         }
+        deleteDarkImage();
     }
 
     private void printPixelARGB(int pixel) {
@@ -74,6 +75,13 @@ public class ImageRGB extends Component {
             }
         }
         return arrayList;
+    }
+
+    private static void deleteDarkImage() {
+        ArrayList<File> arrayList = new ArrayList<File>();
+
+        File file = new File("./image.jpg");
+        file.delete();
     }
 
 
